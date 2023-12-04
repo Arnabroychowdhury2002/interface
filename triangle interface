@@ -1,0 +1,44 @@
+// Triangle interface
+interface Triangle {
+    // Method to determine the type of triangle
+    void type_of_triangle();
+}
+
+// Implementing the Triangle interface in EquilateralTriangle
+class EquilateralTriangle implements Triangle {
+    @Override
+    public void type_of_triangle() {
+        System.out.println("Equilateral Triangle: 3 sides are equal");
+    }
+}
+
+// Implementing the Triangle interface in IsoscelesTriangle
+class IsoscelesTriangle implements Triangle {
+    @Override
+    public void type_of_triangle() {
+        System.out.println("Isosceles Triangle: 2 sides are equal");
+    }
+}
+
+// Implementing the Triangle interface in ScaleneTriangle
+class ScaleneTriangle implements Triangle {
+    @Override
+    public void type_of_triangle() {
+        System.out.println("Scalene Triangle: 3 sides are different");
+    }
+}
+
+// Main class to demonstrate the Triangle interface
+public class TriangleDemo {
+    public static void main(String[] args) {
+        // Creating objects of each triangle type
+        Triangle equilateralTriangle = new EquilateralTriangle();
+        Triangle isoscelesTriangle = new IsoscelesTriangle();
+        Triangle scaleneTriangle = new ScaleneTriangle();
+
+        // Invoking the type_of_triangle method for each type of triangle
+        equilateralTriangle.type_of_triangle();
+        isoscelesTriangle.type_of_triangle();
+        scaleneTriangle.type_of_triangle();
+    }
+}
